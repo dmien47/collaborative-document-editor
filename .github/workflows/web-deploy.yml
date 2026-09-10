@@ -36,8 +36,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Build shared package
+        run: pnpm --filter @cde/shared build
+
       - name: Build web app
-        run: pnpm --filter @cde/web... build
+        run: pnpm --filter @cde/web build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

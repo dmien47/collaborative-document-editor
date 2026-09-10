@@ -7,7 +7,7 @@
   "scripts": {
     "dev:web": "corepack pnpm --filter @cde/shared build && corepack pnpm --filter @cde/web dev",
     "dev:server": "corepack pnpm --filter @cde/shared build && corepack pnpm --filter @cde/collaboration-server dev",
-    "build": "corepack pnpm -r build",
+    "build": "corepack pnpm --filter @cde/shared build && corepack pnpm --filter @cde/collaboration-server build && corepack pnpm --filter @cde/web build",
     "typecheck": "corepack pnpm -r typecheck",
     "test": "corepack pnpm -r test",
     "lint": "corepack pnpm -r lint",
